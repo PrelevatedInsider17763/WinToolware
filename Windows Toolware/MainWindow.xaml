@@ -6,32 +6,32 @@
         xmlns:local="clr-namespace:Windows_Toolware"
         xmlns:SystemStyles="clr-namespace:Selen.Wpf.SystemStyles;assembly=Selen.Wpf.SystemStyles" x:Class="Windows_Toolware.MainWindow"
         mc:Ignorable="d"
-        Title="Windows Toolware" Height="749" Width="1261" WindowTitleBrush="#FF515155" OverlayBrush="#FF515155" Background="#FF2D2D30">
+        Title="Ravenite Codename 'Mostar'" Height="749" Width="1261" WindowTitleBrush="#FF515155" OverlayBrush="#FF515155" Background="#FF2D2D30" BorderBrush="#FFD61C35" GlowBrush="#FFD61C35" BorderThickness="1" ShowIconOnTitleBar="True">
     <Grid>
         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="38" Width="Auto" Background="#FF515155">
-            <Grid HorizontalAlignment="Right" VerticalAlignment="Center" Width="174" Margin="0,0,20,0">
-                <TextBlock Text="No ope..." Margin="10,3,0,3" HorizontalAlignment="Left" Width="48" Foreground="White"/>
-                <ProgressBar HorizontalAlignment="Left" Height="21" VerticalAlignment="Center" Width="114" IsIndeterminate="True" BorderBrush="#FFBCBCBC" BorderThickness="0,0,0,1" Margin="63,0,0,0"/>
-            </Grid>
             <Grid x:Name="SearchBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="273" Background="{StaticResource TextBoxBackground}" MouseDown="Grid_MouseDown">
-                <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" VerticalAlignment="Center" Height="26" VerticalContentAlignment="Center" Margin="3,0,0,0"/>
-                <Label x:Name="txtSearchPlaceholder" Content="Search..." Background="Transparent" Opacity="0.5" IsHitTestVisible="False" Margin="3,0,0,0" Foreground="#FF8C8C8C"/>
+                <TextBox x:Name="txtSearch" TextChanged="txtSearch_TextChanged" VerticalAlignment="Center" Height="26" VerticalContentAlignment="Center" Margin="0" Padding="3,0,0,0"/>
+                <Label x:Name="txtSearchPlaceholder" Content="Search..." Background="Transparent" Opacity="0.5" IsHitTestVisible="False" Margin="0,0,0,0" Foreground="#FF8C8C8C"/>
             </Grid>
             <Button Content="Add" HorizontalAlignment="Left" Margin="71,0,0,0" VerticalAlignment="Center" Width="35" Background="{x:Null}" BorderThickness="0,0,0,0" Height="22" BorderBrush="{x:Null}"/>
             <Button Content="Remove" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center" Width="51" Background="{x:Null}" BorderThickness="0,0,0,0" Height="22" BorderBrush="{x:Null}"/>
-            <Button Click="Button_Click" Content="Monitor" HorizontalAlignment="Right" Margin="0,0,202,0" VerticalAlignment="Center" Width="57" Background="{x:Null}" BorderThickness="0,0,0,0" Height="22" BorderBrush="{x:Null}"/>
+            <Button Click="Button_Click" Content="Monitor" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center" Width="57" Background="{x:Null}" BorderThickness="0,0,0,0" Height="22" BorderBrush="{x:Null}"/>
 
-            <Grid HorizontalAlignment="Right" VerticalAlignment="Center" Width="196" Margin="0,0,274,0">
-                <TextBlock x:Name="UsernameText" Text="Hello, {dialog.Credentials.UserName}" Margin="10,3,0,3" HorizontalAlignment="Left" Width="132" Foreground="White"/>
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Center" Width="402" Margin="0,8,74.4,8">
+                <TextBlock x:Name="UsernameText" Text="Hello, {dialog.Credentials.UserName}!" Margin="0,3,62,2.4" HorizontalAlignment="Right" Foreground="White" TextTrimming="CharacterEllipsis"/>
                 <Button Click="Button_Click_Logout" Content="Sign out" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Center" Width="57" Background="{x:Null}" BorderThickness="0,0,0,0" Height="22" BorderBrush="{x:Null}"/>
             </Grid>
         </Grid>
         <Grid Margin="0,38,0,0">
-            <Grid HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Left" Margin="0,0,0,24.2">
                 <TreeView HorizontalAlignment="Center" Width="210" BorderThickness="0,0,2.1,0" Background="#FF414145" Foreground="White">
                     <TreeView.Resources>
                         <ResourceDictionary Source="pack://application:,,,/Selen.Wpf.Core;component/Resources.xaml"/>
                     </TreeView.Resources>
+                    <TreeViewItem Header="Feature Management" Foreground="White">
+                        <TreeViewItem Header="Remove/Add" Foreground="White"/>
+                        <TreeViewItem Header="Debloat" Foreground="White"/>
+                    </TreeViewItem>
                     <TreeViewItem Header="Advanced" Foreground="White">
                         <CheckBox Content="Developer mode" Foreground="White"/>
                         <TreeViewItem Header="Experimental" Foreground="White">
@@ -44,7 +44,20 @@
                     </TreeViewItem>
                 </TreeView>
             </Grid>
-            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="215,0,0,0"/>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="215,0,0.4,24.2">
+                <TabControl>
+                    <TabItem Header="Start Page">
+                        <Grid>
+                            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="Images" FontSize="24pt" Foreground="White" Margin="29,24,734.2,565"/>
+                            <TreeView Margin="31,84,31,31" Background="Transparent"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="25" Margin="0,0,0.4,-0.8" Background="#FFD61C35">
+                <TextBlock Text="No activities running" Margin="4,3,0,3" HorizontalAlignment="Left" Width="363" Foreground="White" TextTrimming="CharacterEllipsis" FontSize="14" />
+                <ProgressBar HorizontalAlignment="Right" Height="13" VerticalAlignment="Center" Width="114" IsIndeterminate="True" BorderBrush="#FFBCBCBC" BorderThickness="0,0,0,1" Margin="0,2,6,0.2"/>
+            </Grid>
         </Grid>
     </Grid>
 </mah:MetroWindow>

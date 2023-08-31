@@ -1,0 +1,16 @@
+﻿<mah:MetroWindow x:Class="Windows_Toolware.Splash.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Height="276" Width="537.2" WindowStyle="None" Background="#FF2D2D30" WindowTitleBrush="#FF2D2D30" WindowStartupLocation="CenterScreen" NonActiveWindowTitleBrush="#FF2D2D30" ResizeMode="NoResize" ShowCloseButton="False" ShowMinButton="False">
+    <Grid>
+        <mah:MetroProgressBar IsIndeterminate="True" Margin="0" VerticalAlignment="Bottom" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,19,0,0" TextWrapping="Wrap" Text="Prelevated Insider" VerticalAlignment="Top" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,40,0,0" TextWrapping="Wrap" Text="Ravenite" VerticalAlignment="Top" Foreground="White" FontSize="24" FontFamily="Segoe UI Light"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF656565" FontFamily="Segoe UI Light" FontSize="9"><Run Text="Version 2.0-nightly"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="33,220,0,0" TextWrapping="Wrap" Text="Copyright Prelevated Insider Enterprises. All rights legally reserved." VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Light" FontSize="9"/>
+    </Grid>
+</mah:MetroWindow>
